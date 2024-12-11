@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        background-image: url(QQ图片20241104124738.jpg);
+        background-size: cover;
+        opacity: 0.8;
+        margin: 0 auto;
+        height: 1000px;
+      }
+      body {
+        margin-top: 0;
+      }
+      div {
+        height: 1000px;
+        width: 800px;
+        margin: 0 auto;
+        opacity: 0.7;
+        display: block;
+      }
+      /*.test {
+        width: 800px;
+        min-width: 500px;
+        height: 150px;
+        margin: 0 auto;
+        background-color: blue;
+        display: block;
+        text-align: center;
+      }
+      .test0 {
+        width: 800px;
+        min-width: 500px;
+        height: 1000px;
+        margin: 0 auto;
+        background-color: blueviolet;
+        display: block;
+        text-align: center;
+      }*/
+      img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        top: 200px;
+        left: 100px;
+      }
+      .img2 {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        top: 200px;
+        left: 200px;
+      }
+      .an {
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        top: 300px;
+        left: 0px;
+        text-align: center;
+      }
+      button {
+        width: 200px;
+        height: 50px;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var btn = document.getElementById("compare");
+        btn.onclick = function () {
+          var shuru = prompt("请输入密码");
+          if (shuru == "" || shuru == null) return;
+          if (shuru == 202352)
+            window.location.href = "http://127.0.0.1:5500/js/yyj3.html";
+          else alert("错误");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <code class="html"></code>
+    <div>
+      <img src="QQ图片20241104132234.jpg" alt="该图片无法加载" />
+      <img class="img2" src="QQ图片20241104132224.jpg" alt="该图片无法加载" />
+      <div class="an">
+        <button id="compare">进入</button>
+      </div>
+    </div>
+  </body>
+  <!--background-image:url(相对路径),opacity:透明度值,border-radius-->
+</html>
