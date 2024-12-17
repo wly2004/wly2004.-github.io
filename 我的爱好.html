@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的爱好</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-image: url("");
+      }
+      header {
+        background-color: cadetblue;
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 600px;
+      }
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+        max-width: 600px;
+      }
+      .hobby {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        flex: 1 1 calc(33.333% - 20px);
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .hobby img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+      }
+      .hobby h2 {
+        color: #6a11cb;
+        margin-top: 10px;
+      }
+      .hobby p {
+        margin: 10px 0;
+        font-size: 0.9em;
+        color: #666;
+      }
+      .hobby:hover {
+        transition: 1s;
+        transform: scale3d(1.2, 1.2, 1.2);
+      }
+      @media (max-width: 600px) {
+        .hobby {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>我的爱好</h1>
+    </header>
+    <div class="content">
+      <div class="hobby">
+        <img src="旅游.jpg" alt="旅游" />
+        <h2>旅游</h2>
+        <p>探索世界的每一个角落，感受不同的文化和风情。</p>
+      </div>
+      <div class="hobby">
+        <img src="购物.jpg" alt="购物" />
+        <h2>购物</h2>
+        <p>在商场中寻找心仪的物品，享受购物的乐趣。</p>
+      </div>
+      <div class="hobby">
+        <img src="运动.jpg" alt="运动" style="height: 195.36px" />
+        <h2>运动</h2>
+        <p>保持身体健康，享受运动带来的快乐。</p>
+      </div>
+    </div>
+  </body>
+</html>
