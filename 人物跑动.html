@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*img {
+        width: 200px;
+        animation-name: mymove;
+      }
+      @keyframes mymove {
+        0% {
+          transform: translateX(0px) rotateY(180deg);
+        }
+        50% {
+          transform: translateX(1280px) rotateY(180deg);
+        }
+        51% {
+          transform: translateX(1280px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }*/
+      img {
+        width: 200px;
+        animation: walk 4s infinite;
+      }
+      @keyframes walk {
+        0% {
+          transform: translateX(0px) rotateY(180deg);
+        }
+        50% {
+          transform: translateX(1050px) rotateY(180deg);
+        }
+        51% {
+          transform: translateX(1050px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="动画\assets\imgs\people.gif" alt="" />
+  </body>
+</html>
