@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>心情随笔</title>
+    <style>
+        html{
+            background-image: url("留言墙背景图片.jpg");
+        }
+      .content {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.8;
+      }
+      .moodentry {
+        background: #ffffff;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .moodentry .date {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 10px;
+      }
+
+      .moodentry .text {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      #add-mood-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: blueviolet;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+
+      #add-mood-button:hover {
+        background-color: aquamarine;
+        transform: scale3d(1.1, 1.1, 1.1);
+        transition: transform 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>心情随笔</h2>
+      <div class="moodentry">
+        <div id="mood-entries">
+      </div>
+      <button id="add-mood-button">添加心情随笔</button>
+      <input
+        type="text"
+        id="xinqin" 
+        placeholder="在此添加...."
+        style="width: 100%; height: 50px"
+      />
+    </div>
+  </body>
+  <script>
+    document.getElementById("add-mood-button").onclick = function () {
+       /*const xinqin1 = document.getElementById("xinqin").value.trim();
+      if (xinqin1) {
+        const newmoodentry = document.createElement("div");
+        newmoodentry.className = "moodentry";
+        const dateDiv = document.createElement("div");
+        dateDiv.className = "date";
+        const now = new Date();
+        dateDiv.textContent = now.toLocaleDateString();
+
+        const textDiv = document.createElement("div");
+        textDiv.className = "text";
+        textDiv.textContent = xinqin1;
+        newMoodEntry.appendChild(dateDiv);
+        newmoodentry.appendChild(textDiv);
+        const moodEntries = document.getElementById("mood-entries");
+        moodEntries.appendChild(newmoodentry);
+        moodInput.value = "";
+      }
+    };*/
+
+      const moodInput = document.getElementById("xinqin");
+      const moodText = moodInput.value.trim();
+      if (moodText) {
+        const newMoodEntry = document.createElement("div");
+        newMoodEntry.className = "moodentry";
+
+        const dateDiv = document.createElement("div");
+        dateDiv.className = "date";
+        const now = new Date();
+        dateDiv.textContent = now.toLocaleDateString();
+
+        const textDiv = document.createElement("div");
+        textDiv.className = "text";
+        textDiv.textContent = moodText;
+
+        newMoodEntry.appendChild(dateDiv);
+        newMoodEntry.appendChild(textDiv);
+
+        const moodEntries = document.getElementById("mood-entries");
+        moodEntries.appendChild(newMoodEntry);
+        moodInput.value = "";
+      }
+      else
+      alert("你没有输入内容!");
+    };
+  </script>
+</html>
